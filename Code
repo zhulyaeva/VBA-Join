@@ -1,0 +1,17 @@
+Sub Join()
+
+Dim FirstName As String
+Dim LastName As String
+
+Range("A1").Select
+
+Do While ActiveCell <> ""
+FirstName = ActiveCell
+ActiveCell.Offset(0, 1).Select
+LastName = ActiveCell
+ActiveCell.Offset(0, 1).Select
+ActiveCell = FirstName & " " & LastName
+ActiveCell.Offset(1, -2).Select
+ Loop
+
+End Sub
